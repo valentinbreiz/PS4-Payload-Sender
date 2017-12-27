@@ -1,0 +1,9 @@
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\bin\Release\PS4 Payload Sender.exe.config
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\bin\Release\PS4 Payload Sender.exe
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\bin\Release\PS4 Payload Sender.pdb
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\obj\Release\PS4_Payload_Sender.Form1.resources
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\obj\Release\PS4_Payload_Sender.Properties.Resources.resources
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\obj\Release\PS4 Payload Sender.csproj.GenerateResource.Cache
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\obj\Release\PS4 Payload Sender.csproj.CoreCompileInputs.cache
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\obj\Release\PS4 Payload Sender.exe
+C:\Users\valentinbreiz\source\repos\PS4 Payload Sender\PS4 Payload Sender\obj\Release\PS4 Payload Sender.pdb
