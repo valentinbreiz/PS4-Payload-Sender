@@ -39,34 +39,32 @@ namespace PS4_Payload_Sender
 
         public static bool Connect2PS4(string ip, string port)
         {
-                try
-                {
-                    _psocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                    _psocket.ReceiveTimeout = 3000;
-                    _psocket.SendTimeout = 3000;
-                    _psocket.Connect(new IPEndPoint(IPAddress.Parse(ip), Int32.Parse(port)));
-                    pDConnected = true;
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    pDConnected = false;
-                    Exception = ex.ToString();
-                    return false;
-                }
+            try
+            {
+                _psocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                _psocket.ReceiveTimeout = 3000;
+                _psocket.SendTimeout = 3000;
+                _psocket.Connect(new IPEndPoint(IPAddress.Parse(ip), Int32.Parse(port)));
+                pDConnected = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                pDConnected = false;
+                Exception = ex.ToString();
+                return false;
+            }
         }
 
-        public static bool SendPayload(string filename)
+        public static void SendPayload(string filename)
         {
             _psocket.SendFile(filename);
-            return true;
         }
 
-        public static bool DisconnectPayload()
+        public static void DisconnectPayload()
         {
             pDConnected = false;
             _psocket.Close();
-            return true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -91,13 +89,25 @@ namespace PS4_Payload_Sender
             try
             {
                 SendPayload(path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while sending payload!\n" + ex);
+            }
+            try
+            {
                 DisconnectPayload();
                 MessageBox.Show("Payload sent!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error!\n"+ ex);
+                MessageBox.Show("Error while disconnecting!\n" + ex);
             }
+        }
+
+        private void pictureBox60_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://customprotocol.com");
         }
     }
 }
